@@ -15,12 +15,12 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="10dp"
             android:padding="24dp">
 
             <View
-                android:layout_width="8dp"
-                android:layout_height="8dp"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
                 android:background="@drawable/circle_blue"
                 android:layout_margin="4dp"/>
 
@@ -31,8 +31,8 @@
                 android:layout_margin="4dp"/>
 
             <View
-                android:layout_width="8dp"
-                android:layout_height="8dp"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
                 android:background="@drawable/circle_gray"
                 android:layout_margin="4dp"/>
 
@@ -43,8 +43,8 @@
                 android:layout_margin="4dp"/>
 
             <View
-                android:layout_width="8dp"
-                android:layout_height="8dp"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
                 android:background="@drawable/circle_gray"
                 android:layout_margin="4dp"/>
         </LinearLayout>
@@ -57,9 +57,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="10dp"
             android:text="Регистрация"
-            android:textSize="24sp"
+            android:textSize="32sp"
             android:textStyle="bold"
             android:fontFamily="@font/poppins_regular"/>
 
@@ -75,7 +75,7 @@
             android:layout_marginBottom="24dp"
             android:padding="24dp"/>
 
-        <!-- Блок безопасности -->
+        <!-- Блок конфиденциальности -->
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -94,27 +94,66 @@
                 android:layout_height="wrap_content"
                 android:text="Мы серьезно относимся к вопросам конфиденциальности. Вы можете быть уверены, что ваши личные данные надежно защищены."
                 android:layout_weight="1"
-                android:textSize="12sp"
+                android:textSize="14sp"
+                android:maxLines="4"
                 android:layout_marginStart="8dp"/>
         </LinearLayout>
 
         <!-- Ввод email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:text="Введите свою почту" />
+
         <EditText
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Введите свою почту"
             android:inputType="textEmailAddress"
             android:layout_marginBottom="16dp"
-            android:padding="24dp"/>
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+
+        <!-- Ввод пароля -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:text="Придумайте пароль" />
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
 
         <!-- Ввод номера телефона -->
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="20dp"
             android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Введите свой номер телефона"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -122,16 +161,15 @@
                 android:text="+1"
                 android:textSize="16sp"
                 android:gravity="center_vertical"
-                android:layout_marginEnd="8dp"/>
+                android:layout_marginEnd="8dp" />
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="20dp"
-                android:paddingRight="5dp"
                 android:src="@drawable/triangle_down"
-                android:background="?attr/selectableItemBackgroundBorderless">
-            </ImageButton>
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:paddingTop="20dp"
+                android:paddingRight="5dp" />
 
             <EditText
                 android:id="@+id/phoneEditText"
@@ -139,15 +177,21 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="23-456-789"
-                android:inputType="phone"/>
-        </LinearLayout>
+                android:inputType="phone" />
 
-        <!-- Кнопка отправки -->
-        <Button
-            android:id="@+id/sendCodeButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Отправить Код"
-            android:padding="10dp"/>
+        </LinearLayout>
     </LinearLayout>
-</ScrollView>
+
+    <!-- Кнопка отправки -->
+    <Button
+        android:id="@+id/sendCodeButton"
+        android:layout_width="168dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button"
+        android:textColor="@color/black"
+        android:text="Отправить Код" />
+        </LinearLayout>
+    </ScrollView>
