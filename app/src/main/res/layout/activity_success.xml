@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity=""
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="200dp"
+        android:padding="24dp">
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/circle_gray"
+            android:layout_margin="4dp"/>
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="8dp"
+            android:background="@drawable/line"
+            android:layout_margin="4dp"/>
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/circle_gray"
+            android:layout_margin="4dp"/>
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="8dp"
+            android:background="@drawable/line"
+            android:layout_margin="4dp"/>
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/circle_gray"
+            android:layout_margin="4dp"/>
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="8dp"
+            android:background="@drawable/line"
+            android:layout_margin="4dp"/>
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/circle_blue"
+            android:layout_margin="4dp"/>
+    </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:text="Готово!"
+            android:textColor="#1C1C1E"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp"
+            android:text="Всё готово! Можем начинать."
+            android:textColor="#8E8E93"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button"
+            android:padding="12dp"
+            android:text="Войти"
+            android:textColor="#1C1C1E"
+            android:textSize="14sp" />
+
+
+</LinearLayout>

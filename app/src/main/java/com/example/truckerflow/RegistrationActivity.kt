@@ -1,5 +1,6 @@
 package com.example.truckerflow
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -26,6 +27,11 @@ class RegistrationActivity : AppCompatActivity() {
 
             if (email.isNotBlank() && phone.isNotBlank()) {
                 Toast.makeText(this, "Код отправлен!", Toast.LENGTH_SHORT).show()
+                // Создаем Intent для перехода на VerificationActivity
+                val intent = Intent(this, VerificationActivity::class.java)
+                // Запускаем VerificationActivity
+                startActivity(intent)
+                finish()
             } else {
                 Toast.makeText(this, "Пожалуйста, заполните все поля", Toast.LENGTH_SHORT).show()
             }

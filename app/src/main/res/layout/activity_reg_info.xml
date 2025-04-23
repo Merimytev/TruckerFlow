@@ -1,4 +1,3 @@
-<!-- res/layout/activity_registration.xml -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,7 +8,6 @@
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         >
-
 
         <!-- Шаги регистрации -->
         <LinearLayout
@@ -24,31 +22,31 @@
             <View
                 android:layout_width="12dp"
                 android:layout_height="12dp"
+                android:background="@drawable/circle_gray"
+                android:layout_margin="4dp"/>
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="8dp"
+                android:background="@drawable/line"
+                android:layout_margin="4dp"/>
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/circle_gray"
+                android:layout_margin="4dp"/>
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="8dp"
+                android:background="@drawable/line"
+                android:layout_margin="4dp"/>
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
                 android:background="@drawable/circle_blue"
-                android:layout_margin="4dp"/>
-
-            <View
-                android:layout_width="40dp"
-                android:layout_height="8dp"
-                android:background="@drawable/line"
-                android:layout_margin="4dp"/>
-
-            <View
-                android:layout_width="12dp"
-                android:layout_height="12dp"
-                android:background="@drawable/circle_gray"
-                android:layout_margin="4dp"/>
-
-            <View
-                android:layout_width="40dp"
-                android:layout_height="8dp"
-                android:background="@drawable/line"
-                android:layout_margin="4dp"/>
-
-            <View
-                android:layout_width="12dp"
-                android:layout_height="12dp"
-                android:background="@drawable/circle_gray"
                 android:layout_margin="4dp"/>
 
             <View
@@ -69,50 +67,60 @@
         <!-- Описание -->
         <TextView
             android:id="@+id/title"
-            android:layout_width="wrap_content"
+            android:layout_width="308dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="10dp"
-            android:text="Регистрация"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Информация о профиле"
             android:textSize="32sp"
             android:textStyle="bold"
-            android:fontFamily="@font/poppins_regular"/>
-
-        <TextView
-            android:id="@+id/description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Заполните регистрационные данные. Это займет пару минут. Все, что вам нужно, это номер телефона и адрес электронной почты"
-            android:textSize="14sp"
-            android:fontFamily="@font/roboto_variable"
-            android:textAlignment="center"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="24dp"
-            android:padding="24dp"/>
+            android:textAlignment="center"/>
 
         <!-- Блок конфиденциальности -->
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="300dp"
+            android:layout_height="82dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/roboto_variable"
+            android:padding="24dp"
+            android:text="Заполните данные для профиля. Это займет пару минут."
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textColor="#B1AEAE" />
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#EEEEEE"
             android:padding="12dp"
             android:layout_marginBottom="24dp">
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@android:drawable/ic_lock_lock"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Мы серьезно относимся к вопросам конфиденциальности. Вы можете быть уверены, что ваши личные данные надежно защищены."
-                android:layout_weight="1"
-                android:textSize="14sp"
-                android:maxLines="4"
-                android:layout_marginStart="8dp"/>
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="40dp"
+                    android:src="@drawable/check_box"/>
+
+
+                <TextView
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Я согласен с Условия использования"
+                    android:textAlignment="center"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
         </LinearLayout>
+
 
         <!-- Ввод email -->
         <TextView
@@ -121,92 +129,94 @@
             android:paddingTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="5dp"
-            android:text="Введите свою почту" />
+            android:text="Имя"/>
 
         <EditText
-            android:id="@+id/emailEditText"
+            android:id="@+id/FirstNameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp" />
+            android:layout_marginRight="20dp"/>
 
-        <!-- Ввод пароля -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="5dp"
-            android:text="Придумайте пароль" />
+            android:text="Фамилия"/>
 
         <EditText
-            android:id="@+id/passwordEditText"
+            android:id="@+id/SecondNameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp" />
+            android:layout_marginRight="20dp"/>
 
-        <!-- Ввод номера телефона -->
-        <LinearLayout
-            android:orientation="vertical"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:text="Отчество"/>
+
+        <EditText
+            android:id="@+id/MiddleNameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:padding="24dp">
+            android:inputType="text"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:text="Введите свой номер телефона"
-                android:textSize="16sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+1"
-                android:textSize="16sp"
-                android:gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:text="Дата рождение"/>
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/triangle_down"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:paddingTop="20dp"
-                android:paddingRight="5dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/phoneEditText"
-                android:layout_width="0dp"
+                android:layout_width="328dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="23-456-789"
-                android:inputType="phone" />
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="16dp"
+                android:inputType="date" />
 
+            <ImageButton
+                android:layout_width="29dp"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:paddingTop="20dp"
+                android:paddingRight="5dp"
+                android:src="@drawable/triangle_down" />
         </LinearLayout>
+
+        <!-- Кнопка отправки -->
+        <Button
+            android:id="@+id/sendCodeButton"
+            android:layout_width="168dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button"
+            android:textColor="@color/black"
+            android:text="Дальше" />
     </LinearLayout>
-
-    <!-- Кнопка отправки -->
-    <Button
-        android:id="@+id/sendCodeButton"
-        android:layout_width="168dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/button"
-        android:textColor="@color/black"
-        android:text="Отправить Код" />
-        </LinearLayout>
-    </ScrollView>
+</ScrollView>
