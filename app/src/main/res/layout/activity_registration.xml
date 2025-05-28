@@ -173,7 +173,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+1"
+                android:text="+7"
                 android:textSize="16sp"
                 android:gravity="center_vertical"
                 android:layout_marginEnd="8dp" />
@@ -191,7 +191,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="23-456-789"
+                android:hint="(707)-456-7895"
                 android:inputType="phone" />
 
         </LinearLayout>
@@ -203,10 +203,9 @@
         android:layout_width="168dp"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/button"
-        android:textColor="@color/black"
-        android:text="Отправить Код" />
+        android:text="Отправить Код"
+        android:backgroundTint="#0066FF"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp"/>
         </LinearLayout>
     </ScrollView>

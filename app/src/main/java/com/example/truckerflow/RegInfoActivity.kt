@@ -30,8 +30,6 @@ class IdGenerator(context: Context) {
         return newId
     }
 }
-
-
         // Находим элементы по их ID
         val firstNameEditText = findViewById<EditText>(R.id.FirstNameEditText)
         val secondNameEditText = findViewById<EditText>(R.id.SecondNameEditText)
@@ -59,7 +57,6 @@ class IdGenerator(context: Context) {
             datePickerDialog.show()
         }
 
-
         // Создаем генератор ID
         val idGenerator = IdGenerator(this)
 
@@ -86,7 +83,6 @@ class IdGenerator(context: Context) {
                 putExtra("MIDDLE_NAME", middleName)
                 putExtra("BIRTH_DATE", birthDate)
             }
-
 
 
             startActivity(intent)

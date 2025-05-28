@@ -70,7 +70,7 @@
         android:layout_marginBottom="16dp"/>
 
     <TextView
-        android:text="Код был отправлен по телефону\n+7 747 *** ** 78"
+        android:text="Код был отправлен по телефону\n+7 (747) *** ** 95"
         android:textSize="14sp"
         android:layout_marginBottom="8dp"
         android:layout_width="wrap_content"
@@ -88,7 +88,8 @@
         android:gravity="center"/>
 
     <TextView
-        android:text="Этот код истекает через 03:48"
+        android:id="@+id/timerTextView"
+        android:text="Этот код истекает через 05:00"
         android:textSize="14sp"
         android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
@@ -157,7 +158,7 @@
         android:id="@+id/continueButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Продолжить"
+        android:text="Подтвердить"
         android:backgroundTint="#0066FF"
         android:textColor="#FFFFFF"
         android:layout_marginBottom="16dp"/>

@@ -175,14 +175,13 @@
             android:layout_marginRight="20dp"/>
 
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="5dp"
-            android:text="Дата рождение"/>
+            android:paddingTop="20dp"
+            android:text="Дата рождения" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -212,11 +211,11 @@
             android:id="@+id/sendCodeButton"
             android:layout_width="168dp"
             android:layout_height="48dp"
-            android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/button"
-            android:textColor="@color/black"
-            android:text="Дальше" />
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Дальше"
+            android:backgroundTint="#0066FF"
+            android:textColor="#FFFFFF"/>
     </LinearLayout>
 </ScrollView>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Trucker Flow</string>
+    <string name="timer_text">Этот код истекает через %s</string>
 </resources>
