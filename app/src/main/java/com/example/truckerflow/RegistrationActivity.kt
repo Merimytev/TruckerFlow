@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 class RegistrationActivity : AppCompatActivity() {
 
     private lateinit var emailEditText: EditText
+    private lateinit var passwordEditText: EditText
     private lateinit var phoneEditText: EditText
     private lateinit var sendCodeButton: Button
 
@@ -18,23 +19,54 @@ class RegistrationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_registration)
 
         emailEditText = findViewById(R.id.emailEditText)
+        passwordEditText = findViewById(R.id.passwordEditText)
         phoneEditText = findViewById(R.id.phoneEditText)
         sendCodeButton = findViewById(R.id.sendCodeButton)
 
-        sendCodeButton.setOnClickListener {
-            val email = emailEditText.text.toString()
-            val phone = phoneEditText.text.toString()
+        val skipButton = findViewById<Button>(R.id.skipButton)
 
-            if (email.isNotBlank() && phone.isNotBlank()) {
-                Toast.makeText(this, "Код отправлен!", Toast.LENGTH_SHORT).show()
-                // Создаем Intent для перехода на VerificationActivity
-                val intent = Intent(this, VerificationActivity::class.java)
-                // Запускаем VerificationActivity
-                startActivity(intent)
-                finish()
-            } else {
-                Toast.makeText(this, "Пожалуйста, заполните все поля", Toast.LENGTH_SHORT).show()
+        sendCodeButton.setOnClickListener {
+            val email = emailEditText.text.toString().trim()
+            val password = passwordEditText.text.toString().trim()
+            val phone = phoneEditText.text.toString().trim()
+
+            when {
+                email.isBlank() -> {
+                    Toast.makeText(this, "Пожалуйста, введите адрес электронной почты", Toast.LENGTH_SHORT).show()
+                }
+                !isValidEmail(email) -> {
+                    Toast.makeText(this, "Введите корректный адрес электронной почты", Toast.LENGTH_SHORT).show()
+                }
+                password.isBlank() -> {
+                    Toast.makeText(this, "Пожалуйста, введите пароль", Toast.LENGTH_SHORT).show()
+                }
+                phone.isBlank() -> {
+                    Toast.makeText(this, "Пожалуйста, введите номер телефона", Toast.LENGTH_SHORT).show()
+                }
+                !isValidPhone(phone) -> {
+                    Toast.makeText(this, "Номер телефона должен содержать ровно 9 цифр", Toast.LENGTH_SHORT).show()
+                }
+                else -> {
+                    Toast.makeText(this, "Код отправлен!", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, VerificationActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
             }
         }
+        skipButton.setOnClickListener {
+            startActivity(Intent(this, VerificationActivity::class.java))
+        }
+    }
+
+    private fun isValidEmail(email: String): Boolean {
+        // Регулярное выражение для проверки общего формата email
+        val emailPattern = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$".toRegex()
+        return emailPattern.matches(email)
+    }
+
+    private fun isValidPhone(phone: String): Boolean {
+        // Проверяем, что телефон содержит ровно 9 цифр
+        return phone.matches("^[0-9]{9}$".toRegex())
     }
 }

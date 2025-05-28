@@ -1,4 +1,3 @@
-<!-- res/layout/activity_registration.xml -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -7,9 +6,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        >
-
+        android:background="#FFFFFF">
 
         <!-- Шаги регистрации -->
         <LinearLayout
@@ -65,8 +62,6 @@
         </LinearLayout>
 
         <!-- Заголовок -->
-
-        <!-- Описание -->
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
@@ -78,6 +73,7 @@
             android:textStyle="bold"
             android:fontFamily="@font/poppins_regular"/>
 
+        <!-- Описание -->
         <TextView
             android:id="@+id/description"
             android:layout_width="wrap_content"
@@ -170,42 +166,49 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+7"
-                android:textSize="16sp"
-                android:gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+7"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:layout_marginEnd="8dp" />
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/triangle_down"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:paddingTop="20dp"
-                android:paddingRight="5dp" />
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/triangle_down"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:paddingTop="20dp"
+                    android:paddingRight="5dp" />
 
-            <EditText
-                android:id="@+id/phoneEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="(707)-456-7895"
-                android:inputType="phone" />
-
+                <EditText
+                    android:id="@+id/phoneEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="(707)-456-7895"
+                    android:inputType="phone"
+                    android:maxLength="9" />
+            </LinearLayout>
         </LinearLayout>
+
+        <!-- Кнопка отправки -->
+        <Button
+            android:id="@+id/sendCodeButton"
+            android:layout_width="168dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Отправить Код"
+            android:backgroundTint="#0066FF"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+        <Button
+            android:id="@+id/skipButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Пропустить (Для разработчиков)"
+            android:backgroundTint="#EEEEFF"
+            android:textColor="#0066FF"/>
     </LinearLayout>
-
-    <!-- Кнопка отправки -->
-    <Button
-        android:id="@+id/sendCodeButton"
-        android:layout_width="168dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center_horizontal"
-        android:text="Отправить Код"
-        android:backgroundTint="#0066FF"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="16dp"/>
-        </LinearLayout>
-    </ScrollView>
+</ScrollView>

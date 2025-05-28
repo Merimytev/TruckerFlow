@@ -60,7 +60,7 @@
     </LinearLayout>
 
     <TextView
-        android:text="Пожалуйста\nвведите код\nверефикации"
+        android:text="Пожалуйста\nвведите код\nверификации"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textAlignment="center"
@@ -146,13 +146,28 @@
             android:background="@drawable/code_input_border"/>
     </LinearLayout>
 
-    <TextView
-        android:text="Отправить повторно 🔄"
-        android:textColor="#FF5722"
-        android:layout_marginBottom="24dp"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"/>
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:id="@+id/repeatButton"
+            android:text="Отправить повторно"
+            android:textColor="#FF5722"
+            android:layout_marginBottom="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginEnd="8dp"/>
+
+        <ImageView
+            android:layout_marginBottom="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/repeat" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/continueButton"
