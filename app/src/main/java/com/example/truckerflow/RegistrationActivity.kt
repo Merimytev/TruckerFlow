@@ -51,7 +51,7 @@ class RegistrationActivity : AppCompatActivity() {
                     Toast.makeText(this, "Пожалуйста, введите номер телефона", Toast.LENGTH_SHORT).show()
                 }
                 !isValidPhone(phone) -> {
-                    Toast.makeText(this, "Номер телефона должен содержать ровно 9 цифр", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Номер телефона должен содержать ровно 10 цифр", Toast.LENGTH_SHORT).show()
                 }
                 else -> {
                     Toast.makeText(this, "Код отправлен!", Toast.LENGTH_SHORT).show()
@@ -77,7 +77,7 @@ class RegistrationActivity : AppCompatActivity() {
     }
 
     private fun isValidPhone(phone: String): Boolean {
-        // Проверяем, что телефон содержит ровно 9 цифр
-        return phone.matches("^[0-9]{9}$".toRegex())
+        // Проверяем, что телефон содержит ровно 10 цифр
+        return phone.matches("^[0-9]{10}$".toRegex())
     }
 }

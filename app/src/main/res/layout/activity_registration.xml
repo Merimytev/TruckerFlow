@@ -200,7 +200,7 @@
                     android:layout_weight="1"
                     android:hint="(707)-456-7895"
                     android:inputType="phone"
-                    android:maxLength="9" />
+                    android:maxLength="10" />
             </LinearLayout>
         </LinearLayout>
 
