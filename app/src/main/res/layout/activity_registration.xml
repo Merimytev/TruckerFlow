@@ -92,6 +92,7 @@
 
         <!-- Блок конфиденциальности -->
         <LinearLayout
+            android:id="@+id/privacyBlock"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -112,6 +113,16 @@
                 android:textSize="14sp"
                 android:maxLines="4"
                 android:layout_marginStart="8dp"/>
+
+            <!-- Кнопка закрытия блока -->
+            <ImageButton
+                android:id="@+id/closePrivacyButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_close"
+                android:contentDescription="Close Privacy Block" />
+
         </LinearLayout>
 
         <!-- Ввод email -->
