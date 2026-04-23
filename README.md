@@ -23,7 +23,7 @@
 ## ⚙️ Technologies
 
 ### 🧠 Backend
-- Database: **SQLite** or **PostgreSQL** (TBD)
+- Database: **MySQL** or **PostgreSQL**  (TBD)
 - SMS API Integration: **Twilio** or similar
 
 ---
